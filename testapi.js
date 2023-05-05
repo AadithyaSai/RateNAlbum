@@ -1,10 +1,16 @@
+const { config } = require("dotenv");
+config();
+
+console.log(process.env.CLIENT_ID);
+console.log(process.env.CLIENT_SECRET);
+
 async function newSpotifyToken() {
 
   const url = 'https://accounts.spotify.com/api/token';
   response = await fetch(url, {
     method: 'POST',
     headers: {
-      'Authorization': 'Basic ' + (btoa(CLIENT_ID + ':' + CLIENT_SECRET)),
+      'Authorization': 'Basic ' + (btoa(process.env.CLIENT_ID + ':' + process.env.CLIENT_SECRET)),
       'Content-Type': 'application/x-www-form-urlencoded'
     },
     body: 'grant_type=client_credentials',
