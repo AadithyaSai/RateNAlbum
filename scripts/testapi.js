@@ -4,7 +4,7 @@ async function newSpotifyToken() {
   response = await fetch(url, {
     method: 'POST',
     headers: {
-      'Authorization': 'Basic ' + (btoa(secrets.CLIENT_ID + ':' + secrets.CLIENT_SECRET)),
+      'Authorization': 'Basic ' + (btoa(CLIENT_ID + ':' + CLIENT_SECRET)),
       'Content-Type': 'application/x-www-form-urlencoded'
     },
     body: 'grant_type=client_credentials',
