@@ -1,0 +1,19 @@
+{
+  "name": "rate-n-album",
+  "version": "1.0.0",
+  "description": "A robust album rating tool",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.82.0",
+    "webpack-cli": "^5.1.0"
+  },
+  "dependencies": {
+    "dotenv-webpack": "^8.0.1"
+  }
+}

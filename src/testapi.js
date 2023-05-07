@@ -1,7 +1,7 @@
 async function newSpotifyToken() {
 
   const url = 'https://accounts.spotify.com/api/token';
-  response = await fetch(url, {
+  let response = await fetch(url, {
     method: 'POST',
     headers: {
       'Authorization': 'Basic ' + (btoa(process.env.CLIENT_ID + ':' + process.env.CLIENT_SECRET)),
@@ -25,7 +25,7 @@ async function fetchResult(url, token) {
     token = await newSpotifyToken();
   }
 
-  response = await fetch(url, {
+  let response = await fetch(url, {
     method: 'GET',
     headers: {
       'Authorization': 'Bearer ' + token,
@@ -64,7 +64,7 @@ async function getAlbumDeets() {
   deetsResult.items.forEach(element => {
     let newRow = trackTable.insertRow(-1);
 
-    rowContent = `<td> ${element.name} </td> <td> <input type="text" id=track${i++} > <td>`;
+    let rowContent = `<td> ${element.name} </td> <td> <input type="text" id=track${i++} > <td>`;
     newRow.innerHTML = rowContent;
   });
 }
