@@ -1,9 +1,3 @@
-const { config } = require("dotenv");
-config();
-
-console.log(process.env.CLIENT_ID);
-console.log(process.env.CLIENT_SECRET);
-
 async function newSpotifyToken() {
 
   const url = 'https://accounts.spotify.com/api/token';
