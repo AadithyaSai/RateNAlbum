@@ -1,4 +1,4 @@
-const { config } = require("dotenv");
+import { config } from "./node_modules/dotenv";
 config();
 
 console.log(process.env.CLIENT_ID);
