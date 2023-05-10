@@ -1,0 +1,35 @@
+*{
+    user-select: none;
+}
+
+#album-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#album-cover{
+    padding-top: 10px;
+}
+#album-name{
+    padding-top: 10px;
+}
+
+#album-url{
+    text-decoration: none;
+    font-size: medium;
+    padding-top: -10px;
+}
+
+#track-table{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+
